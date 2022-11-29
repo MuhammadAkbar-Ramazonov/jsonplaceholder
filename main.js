@@ -1,12 +1,11 @@
 const usersList = document.querySelector(".users-list-js");
 const elTemp = document.querySelector(".users-temp").content;
-const elPostTemp = document.querySelector(".post-temp").content;
-const elCommentsTemp = document.querySelector(".comments-temp").content;
-
 
 const postList = document.querySelector(".posts-list");
-const commentsList = document.querySelector(".comments-list");
+const elPostTemp = document.querySelector(".post-temp").content;
 
+const commentsList = document.querySelector(".comments-list");
+const elCommentsTemp = document.querySelector(".comments-temp").content;
 
 function renderUsers(data, node){
     node.innerHTML = "";
@@ -20,7 +19,7 @@ function renderUsers(data, node){
         elTempClone.querySelector(".users-gmail").href = `mailto:${element.email}`;
         elTempClone.querySelector(".users-gmail").textContent = element.email;
         elTempClone.querySelector(".users-location").textContent = "Goe Location"
-        elTempClone.querySelector(".users-phone").href = `tel:${element.phone}`;
+        elTempClone.querySelector(".users-phone").href = `tel:+${element.phone.split(" x")[0]}`;
         elTempClone.querySelector(".users-phone").textContent = "Phone Number";
         elTempClone.querySelector(".users-site").href = element.website;
         elTempClone.querySelector(".users-site").textContent = element.website;
@@ -81,7 +80,6 @@ async function getUsers(url, render = renderUsers, node = usersList, id){
 
 getUsers("https://jsonplaceholder.typicode.com/users");
 
-
 usersList.addEventListener("click", evt=> {
     evt.preventDefault();
     if (evt.target.matches(".users-item")) {
@@ -92,9 +90,9 @@ usersList.addEventListener("click", evt=> {
 
 postList.addEventListener("click", evt =>{
     evt.preventDefault();
+    console.log(evt.target);
     if (evt.target.matches(".post-item")) {
         const eldatasetid = evt.target.dataset.id
-        console.log(eldatasetid);
         getUsers("https://jsonplaceholder.typicode.com/comments", renderComments, commentsList, eldatasetid);
     }    
 })

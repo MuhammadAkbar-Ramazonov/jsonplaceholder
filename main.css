@@ -2,8 +2,12 @@ body {
     background-color: #1B2C3C;
 }
 .users-item {
+    z-index: 2;
     background-color: #273643;
     border: 2px solid #848f9b;
+}
+.z-index{
+    z-index: 3;
 }
 .post-item {
     background-color: #273643;
