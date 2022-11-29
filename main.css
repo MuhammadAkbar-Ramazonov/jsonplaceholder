@@ -1,0 +1,23 @@
+body {
+    background-color: #1B2C3C;
+}
+.users-item {
+    background-color: #273643;
+    border: 2px solid #848f9b;
+}
+.post-item {
+    background-color: #273643;
+    border: 2px solid #848f9b;
+}
+.users-id{
+    color: #2E4852;
+    top: 13px;
+    right: 15px;
+    font-size: 79px;
+}
+.users-info-color{
+    color: #73FFF2;
+}
+.post-title {
+    z-index: 3;
+}
