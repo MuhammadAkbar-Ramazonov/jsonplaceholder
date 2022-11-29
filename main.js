@@ -10,6 +10,7 @@ const elCommentsTemp = document.querySelector(".comments-temp").content;
 function renderUsers(data, node){
     node.innerHTML = "";
     data.forEach(element => {
+        commentsList.innerHTML = "";
         const elTempClone = elTemp.cloneNode(true);
         
         elTempClone.querySelector(".users-item").dataset.id = element.id;
@@ -34,6 +35,7 @@ function renderUsers(data, node){
 
 function renderPost(data, node, id){
     node.innerHTML = ""
+    commentsList.innerHTML = "";
     
     data.forEach(element => {
         if (element.userId == id) {
