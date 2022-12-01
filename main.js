@@ -7,6 +7,8 @@ const elPostTemp = document.querySelector(".post-temp").content;
 const commentsList = document.querySelector(".comments-list");
 const elCommentsTemp = document.querySelector(".comments-temp").content;
 
+AOS.init();
+
 function renderUsers(data, node){
     node.innerHTML = "";
     data.forEach(element => {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
     </section>
     <!-- hero section finish -->
     <template class="users-temp">
-        <li class="users-item position-relative p-3 mb-3 text-white rounded-3" data-id="">
+        <li class="users-item position-relative p-3 mb-3 text-white rounded-3" data-id="" data-aos="zoom-in-right"  data-aos-easing="ease-in-sine">
             <p class="users-id position-absolute">1</p>
             <h2 class="users-title users-info-color">Bret</h2>
             <h3 class="users-name fw-bold">Leanna Grahham</h3>
@@ -46,7 +47,7 @@
     </template>
     
     <template class="post-temp">
-        <li class="post-item position-relative p-4 mb-3 text-white rounded-3" data-id="">
+        <li class="post-item position-relative p-4 mb-3 text-white rounded-3" data-id="" data-aos="zoom-in-right" data-aos-easing="ease-in-sine">
             <p class="post-id users-id position-absolute">1</p>
             <h2 class="post-title position-relative  users-info-color">Bret</h2>
             <p class="post-desc">jhcoisoisdn coisdncsd</p>
@@ -54,13 +55,15 @@
     </template>
     
     <template class="comments-temp">
-        <li class="users-item position-relative p-4 mb-3 text-white rounded-3">
+        <li class="users-item position-relative p-4 mb-3 text-white rounded-3" data-aos="zoom-in-right" data-aos-easing="ease-in-sine">
             <p class="comments-id users-id position-absolute">1</p>
             <h2 class="comments-title position-relative users-info-color">Bret</h2>
             <a class="comments-gmail text-decoration-none text-white" href="" target="blank">dfsdfsd</a>
             <p class="comments-desc">jhcoisoisdn coisdncsd</p>
         </li>
     </template>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="./main.js"></script>
 </body>
 </html>
